@@ -1,7 +1,7 @@
 # AutoLink 활성 작업일지 (Active Work Log)
 
 > **이 파일은 항상 최신 작업 상태를 반영합니다.** 매 작업 단위마다 갱신.
-> **최종 갱신**: 2026-04-29 20:58:04 KST
+> **최종 갱신**: 2026-04-29 21:15:00 KST
 > **세션**: P29.1.1.0
 > **상위 인덱스**: [`docs/_INDEX.md`](../_INDEX.md)
 > **달성률 트래커**: [`docs/20260429_195604_AutoLink_달성률_트래커.md`](../20260429_195604_AutoLink_달성률_트래커.md)
@@ -17,6 +17,26 @@
 ---
 
 ## 📜 작업 이력 (시간 역순)
+
+### [2026-04-29 21:15:00] Gmail MCP 우회 설계 — Chrome MCP 기반 SKILL 재작성
+- **무엇을**: Scheduled Task SKILL.md를 Chrome MCP 기반으로 전면 재작성
+- **왜**: Gmail MCP OAuth 토큰 권한 부족 + 재연결 시 Google 400 에러 발생 → 즉시 작동 가능한 우회 필요
+- **결과물**: `~/.claude/scheduled-tasks/autolink-intake/SKILL.md` (Chrome MCP 버전)
+- **우회 설계 핵심**:
+  - Chrome MCP로 jyc0289y@gmail.com 받은편지함 직접 조작
+  - 라벨 자동 생성 불가 → 별표(★) + 사전 수동 생성 라벨 사용
+  - read_page로 메일 본문 추출, 답장 UI로 Draft 생성
+- **한계**: Chrome 상시 가동 필수, UI 변경에 취약, 토큰 비용 증가
+- **후속**: ACT-007 (Gmail MCP 복구) 완료 시 API 기반으로 재전환
+
+### [2026-04-29 21:10] Gmail MCP 재연결 시도 → Google 400 에러
+- **무엇을**: 사용자가 Connectors 페이지에서 Gmail 재연결 시도
+- **결과**: Google OAuth 측 400 에러 (서버 거부)
+- **추정 원인**: OAuth 토큰 캐시 충돌 또는 redirect_uri 불일치
+- **해결책 검토**: 
+  - 옵션 1: Google 권한 페이지에서 Anthropic 캐시 정리 후 재시도
+  - 옵션 2: 다른 Gmail Connector (Pipedream 등) 사용
+  - **옵션 3 채택**: Chrome MCP 우회 (즉시 작동, 추후 옵션 1로 복구)
 
 ### [2026-04-29 20:58:04] 작업일지 시스템 구축
 - **무엇을**: `docs/_INDEX.md` 마스터 인덱스 + `docs/worklog/` 작업일지 디렉토리 생성
@@ -104,7 +124,9 @@
 
 | ID | 항목 | 상태 | 트리거 조건 |
 |----|------|------|-------------|
-| ACT-001 | Gmail MCP 재연결 (라벨 생성 권한) | 🟡 대기 | 사용자가 Connectors 재연결 |
+| ACT-001 | ~~Gmail MCP 재연결~~ → ACT-007로 통합 | 🔄 보류 | Chrome MCP로 우회 중 |
+| ACT-007 | **Gmail MCP 복구** (옵션 1: Google 권한 캐시 정리) | 🔴 우선 액션 | (1) myaccount.google.com/permissions에서 Anthropic 제거 → (2) Connectors 재연결 → (3) 권한 화면에서 라벨/Draft 모두 체크. 복구 시 SKILL.md를 API 기반으로 재전환 |
+| ACT-008 | **Gmail 라벨 5개 수동 생성** (Chrome MCP 우회 작동 조건) | 🟡 우선 액션 | jyc0289y@gmail.com Gmail에서: AutoLink/신규, AutoLink/검토중, AutoLink/수주, AutoLink/거절, AutoLink/처리완료 |
 | ACT-002 | autolinksl.com 도메인 구매 | ⬜ 대기 | 사용자 결정 |
 | ACT-003 | AutoLink → AutoLink SL 리브랜딩 | ⬜ 진행 가능 | 사용자 승인됨 (이전 답변) |
 | ACT-004 | 시그니처 데모 #1 (가격 모니터링) 구축 | ⬜ 대기 | Phase 1 후반 |
