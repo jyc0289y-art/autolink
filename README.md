@@ -1,6 +1,9 @@
-# AutoLink
+# AutoLink SL
 
 업무 자동화 + 웹 대시보드 서비스 (SL Corporation 산하)
+
+> **브랜드 표기**: AutoLink SL (KIPRIS 상표 검색에서 BMW의 "Autolink" 35류 등록 발견 → SL 접미를 통한 차별화)
+> **코드 경로/리포명**: `autolink` (URL 안정성 유지)
 
 > "엑셀 노가다, 끝. 자동으로 수집. 자동으로 분석. 자동으로 보고."
 

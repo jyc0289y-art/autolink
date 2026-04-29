@@ -1,10 +1,16 @@
-# AutoLink 기록물 인덱스 (Document Master Index)
+# AutoLink SL 기록물 인덱스 (Document Master Index)
 
 > **최종 갱신**: 2026-04-29 20:58:04 KST
 > **세션**: P29.1.1.0
 > **목적**: 모든 기록물의 단일 진입점. 다른 세션에서 컨텍스트 복원 시 이 파일부터 읽을 것.
 
 ---
+
+## 🚨 최우선 — 매 세션 시작 시 첫 번째로 읽기
+
+| 문서 | 경로 | 목적 |
+|------|------|------|
+| **🔴 REMINDERS** | [`docs/REMINDERS.md`](REMINDERS.md) | 미해결 critical 이슈 (Gmail MCP 복구 등) |
 
 ## 🗂️ 기록물 분류
 

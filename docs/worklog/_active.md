@@ -1,4 +1,4 @@
-# AutoLink 활성 작업일지 (Active Work Log)
+# AutoLink SL 활성 작업일지 (Active Work Log)
 
 > **이 파일은 항상 최신 작업 상태를 반영합니다.** 매 작업 단위마다 갱신.
 > **최종 갱신**: 2026-04-29 21:15:00 KST

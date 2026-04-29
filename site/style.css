@@ -49,6 +49,20 @@ body {
   letter-spacing: -0.02em;
 }
 
+.brand-suffix {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.4rem;
+  margin-left: 0.2rem;
+  background: #111;
+  color: #fff;
+  border-radius: 3px;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+
 .lang-right {
   display: flex;
   align-items: center;

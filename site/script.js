@@ -1,4 +1,4 @@
-/* === AutoLink — Main Script === */
+/* === AutoLink SL — Main Script === */
 
 // ─── i18n translations ───
 const I18N = {
