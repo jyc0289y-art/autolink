@@ -566,6 +566,107 @@ footer {
   .kinetic-line { font-size: clamp(2rem, 14vw, 3.5rem); }
 }
 
+/* === Service Areas (4 Categories) === */
+
+#service-areas {
+  background: #fafafa;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.area-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.75rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.area-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.area-num {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: #2563eb;
+  background: #dbeafe;
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  margin-bottom: 0.8rem;
+}
+
+.area-card h3 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.area-card > p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.area-examples {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 0.9rem;
+}
+
+.area-examples li {
+  font-size: 0.9rem;
+  color: #6b7280;
+  padding: 0.25rem 0;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.area-examples li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* === Portfolio Card Tags === */
+
+.card-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.card-tag-area {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .areas-grid { grid-template-columns: 1fr; }
+}
+
 /* === Restructured Form: Legal Notice + Natural-Language First === */
 
 .legal-notice {
