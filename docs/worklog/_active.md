@@ -18,6 +18,21 @@
 
 ## 📜 작업 이력 (시간 역순)
 
+### [2026-04-29 22:05:00] 의뢰 폼 재설계 (계약 보호 Step 1)
+- **무엇을**: 6변수 루브릭을 공개 폼에서 제거 → 백엔드 내부 도구로 환원. 자연어 자유기술란을 메인으로 승격
+- **왜**: 사장님 의뢰자가 6변수를 이해하지 못함 → 폼 이탈 + 자동 견적 신뢰성 부족 → 위약금/배상 리스크
+- **결과물**:
+  - [`site/index.html`](../../site/index.html): 폼 전면 재설계
+    - 상단 `legal-notice` 박스 추가 ("문의 단계", "계약 아님", "검토 후 별도 견적", "거절 가능")
+    - 자연어 자유기술란 (필수, 사장님 친화 예시 placeholder)
+    - 결과물 형태 multi-select 체크박스
+    - 3중 약관 동의 (계약 단계 명시 / 약관 위반 거절 / 검토 거절)
+    - "문의 접수하기" 버튼 + "1~2 영업일 내 회신" 안내
+  - [`site/thank-you.html`](../../site/thank-you.html): 신규 — 4단계 절차 + 샘플 첨부 권장 + 문의 메일 안내
+  - [`site/style.css`](../../site/style.css): legal-notice / agreement / checkbox-grid / thank-you-card 스타일
+  - [`site/script.js`](../../site/script.js): 견적 계산 로직 제거 (백엔드로 이동), captureMetadata 단순화
+- **다음 단계**: Step 2 — SKILL.md 3-게이트 재설계 (자동 검토 → 진영 대표 수동 검토 → 정식 견적 발송)
+
 ### [2026-04-29 21:15:00] Gmail MCP 우회 설계 — Chrome MCP 기반 SKILL 재작성
 - **무엇을**: Scheduled Task SKILL.md를 Chrome MCP 기반으로 전면 재작성
 - **왜**: Gmail MCP OAuth 토큰 권한 부족 + 재연결 시 Google 400 에러 발생 → 즉시 작동 가능한 우회 필요

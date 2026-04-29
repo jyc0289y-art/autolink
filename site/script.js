@@ -272,41 +272,13 @@ function setLanguage(lang) {
     });
   }
 
-  updateEstimate();
+  captureMetadata();
 }
 
-// ─── Estimate Calculator ───
-function getScore() {
-  let total = 0;
-  for (let i = 1; i <= 6; i++) {
-    const checked = document.querySelector(`input[name="v${i}"]:checked`);
-    total += checked ? parseInt(checked.value) : 1;
-  }
-  return total;
-}
-
-function scoreToGrade(score) {
-  if (score <= 7) return 'S';
-  if (score <= 10) return 'A';
-  if (score <= 13) return 'B';
-  if (score <= 16) return 'C';
-  return 'D';
-}
-
-function updateEstimate() {
-  const score = getScore();
-  const grade = scoreToGrade(score);
-  const data = ESTIMATE_DATA[currentLang] || ESTIMATE_DATA.en;
-
-  document.getElementById('est-score').textContent = score;
-  document.getElementById('est-grade').textContent = grade;
-  document.getElementById('est-price').textContent = data.grades[grade];
-  document.getElementById('est-sub').textContent = data.subs[grade];
-
-  document.getElementById('hidden-score').value = score;
-  document.getElementById('hidden-grade').value = grade;
-  document.getElementById('hidden-estimate').value = data.grades[grade];
-  document.getElementById('hidden-lang').value = currentLang;
+// ─── Capture client language for back-end stage scoring ───
+function captureMetadata() {
+  const langField = document.getElementById('hidden-lang');
+  if (langField) langField.value = currentLang;
 }
 
 // ─── Scroll Reveal ───
@@ -333,18 +305,14 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
 
-  // Estimate live update
-  document.querySelectorAll('input[type="radio"]').forEach(radio => {
-    radio.addEventListener('change', updateEstimate);
-  });
-  updateEstimate();
+  captureMetadata();
 
   // Scroll reveal
   initReveal();
 
-  // Form submission feedback
+  // Form submission — capture language metadata at submit time
   const form = document.getElementById('autolink-form');
-  form.addEventListener('submit', (e) => {
-    updateEstimate();
-  });
+  if (form) {
+    form.addEventListener('submit', () => captureMetadata());
+  }
 });
