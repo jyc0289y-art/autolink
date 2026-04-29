@@ -667,6 +667,102 @@ footer {
   .areas-grid { grid-template-columns: 1fr; }
 }
 
+/* === Operating Cost Transparency === */
+
+#cost-transparency {
+  background: #fafafa;
+}
+
+.cost-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 1.5rem;
+}
+
+.cost-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.75rem;
+}
+
+.cost-card.free {
+  border-left: 4px solid #10b981;
+}
+
+.cost-card.paid {
+  border-left: 4px solid #f59e0b;
+}
+
+.cost-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  margin-bottom: 0.6rem;
+}
+
+.cost-card.free .cost-badge {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.cost-card.paid .cost-badge {
+  background: #fef3c7;
+  color: #78350f;
+}
+
+.cost-card h3 {
+  font-size: 1.15rem;
+  font-weight: 900;
+  margin: 0 0 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+.cost-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cost-card li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #444;
+  border-bottom: 1px dashed #f3f4f6;
+}
+
+.cost-card li:last-child { border-bottom: none; }
+
+.cost-policy {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: #fef9f3;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #78350f;
+  line-height: 1.6;
+}
+
+.cost-disclaimer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 4px;
+  color: #1e40af;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .cost-grid { grid-template-columns: 1fr; }
+}
+
 /* === Restructured Form: Legal Notice + Natural-Language First === */
 
 .legal-notice {
