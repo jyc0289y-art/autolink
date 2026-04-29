@@ -33,9 +33,17 @@
 | 문서 | 경로 | 설명 |
 |------|------|------|
 | 프로젝트 지침 | [`.claude/CLAUDE.md`](../.claude/CLAUDE.md) | Claude Code 자동 로드 — 정체성·기술스택·규칙 |
-| Scheduled Task SKILL | `~/.claude/scheduled-tasks/autolink-intake/SKILL.md` | 자동 의뢰 분석 파이프라인 (cron 1시간) |
+| Scheduled Task SKILL (3-게이트) | `~/.claude/scheduled-tasks/autolink-intake/SKILL.md` | 자동 검토 → 진영 대표 검토 → 정식 견적 |
 | Production Lessons (TRAP) | [`docs/production_lessons.md`](production_lessons.md) | 시행착오 기록 (TRAP-NNN) |
 | README | [`README.md`](../README.md) | 빠른 시작 가이드 |
+
+### 5. 법무 템플릿 (계약 보호 장치)
+| 문서 | 경로 | 설명 |
+|------|------|------|
+| 법무 템플릿 가이드 | [`legal/templates/_README.md`](../legal/templates/_README.md) | 견적·SOW·약관 사용 흐름 |
+| 정식 견적서 템플릿 | [`legal/templates/quote-template.md`](../legal/templates/quote-template.md) | 비계약 견적 (게이트 3) |
+| SOW 템플릿 (계약 본체) | [`legal/templates/sow-template.md`](../legal/templates/sow-template.md) | 포함/제외 작업 명세 |
+| 거래 약관 (ToS) | [`legal/templates/terms-of-service.md`](../legal/templates/terms-of-service.md) | 모든 거래 공통 적용 — ⚠️ 변호사 검토 필요 |
 
 ### 4. 코드 자산
 | 문서 | 경로 | 설명 |
