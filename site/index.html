@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko" data-lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoLink — Automate Your Work</title>
+  <meta name="description" content="업무 자동화 + 웹 대시보드 서비스. 반복 업무를 자동으로. Submit in any language.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+KR:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Language Switcher (sticky) -->
+  <nav id="lang-bar">
+    <div class="lang-left">
+      <span class="brand">Auto<span class="accent">Link</span></span>
+    </div>
+    <div class="lang-right">
+      <button class="lang-btn active" data-lang="ko">한국어</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">日本語</button>
+      <a href="#intake-form" class="nav-cta" data-i18n="nav_cta">의뢰하기</a>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: Hero — Kinetic Typography -->
+  <section id="hero">
+    <div class="hero-inner">
+      <h1 class="kinetic-line line-1" data-i18n="hero_1">반복 업무,</h1>
+      <h1 class="kinetic-line line-2 accent" data-i18n="hero_2">자동으로.</h1>
+      <p class="hero-sub" data-i18n="hero_sub">수집. 분석. 보고. 전부 자동화합니다.</p>
+      <div class="hero-words">
+        <span class="rotating-word" data-i18n="hero_w1">크롤링</span>
+        <span class="rotating-word" data-i18n="hero_w2">대시보드</span>
+        <span class="rotating-word" data-i18n="hero_w3">알림</span>
+        <span class="rotating-word" data-i18n="hero_w4">AI 분석</span>
+      </div>
+      <a href="#intake-form" class="hero-cta" data-i18n="hero_cta">무료 견적 받기</a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Portfolio Gallery -->
+  <section id="portfolio">
+    <h2 class="section-title" data-i18n="portfolio_title">이런 일을 합니다</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal">
+        <div class="card-icon">📊</div>
+        <h3 data-i18n="case1_title">가격 모니터링</h3>
+        <p data-i18n="case1_desc">경쟁사 가격을 자동 수집, 변동 시 즉시 알림. 대시보드에서 한눈에.</p>
+        <span class="card-tag" data-i18n="case1_tag">Standard</span>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="card-icon">🏠</div>
+        <h3 data-i18n="case2_title">매물 추적</h3>
+        <p data-i18n="case2_desc">부동산·중고차 등 신규 매물을 실시간 추적. 지도 대시보드 제공.</p>
+        <span class="card-tag" data-i18n="case2_tag">Premium</span>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="card-icon">📱</div>
+        <h3 data-i18n="case3_title">SNS 모니터링</h3>
+        <p data-i18n="case3_desc">인스타·유튜브·블로그 키워드 추적. 주간 리포트 자동 생성.</p>
+        <span class="card-tag" data-i18n="case3_tag">Standard</span>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="card-icon">⭐</div>
+        <h3 data-i18n="case4_title">리뷰 AI 분석</h3>
+        <p data-i18n="case4_desc">고객 리뷰를 AI가 분류·분석. 긍정/부정 트렌드를 대시보드로.</p>
+        <span class="card-tag signature" data-i18n="case4_tag">Signature</span>
+      </div>
+      <div class="portfolio-card reveal">
+        <div class="card-icon">🛒</div>
+        <h3 data-i18n="case5_title">매출 통합 대시보드</h3>
+        <p data-i18n="case5_desc">네이버·쿠팡·자사몰 매출을 하나의 대시보드에서 실시간 확인.</p>
+        <span class="card-tag" data-i18n="case5_tag">Premium</span>
+      </div>
+      <div class="portfolio-card reveal meta">
+        <div class="card-icon">🔧</div>
+        <h3 data-i18n="case6_title">이 사이트도 자동화</h3>
+        <p data-i18n="case6_desc">의뢰서 접수 → AI 분석 → 견적 → 응대까지, 이 사이트 자체가 자동화의 증거.</p>
+        <span class="card-tag" data-i18n="case6_tag">Meta</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Packages -->
+  <section id="packages">
+    <h2 class="section-title" data-i18n="pkg_title">서비스 패키지</h2>
+    <div class="package-grid">
+      <div class="package-card reveal">
+        <h3>Basic</h3>
+        <p class="price" data-i18n="pkg_basic_price">30~80만원</p>
+        <p class="price-sub" data-i18n="pkg_basic_sub">일회성</p>
+        <ul>
+          <li data-i18n="pkg_basic_1">자동화 스크립트</li>
+          <li data-i18n="pkg_basic_2">CSV/엑셀 결과물</li>
+          <li data-i18n="pkg_basic_3">1회 납품</li>
+        </ul>
+      </div>
+      <div class="package-card popular reveal">
+        <div class="popular-badge" data-i18n="pkg_popular">인기</div>
+        <h3>Standard</h3>
+        <p class="price" data-i18n="pkg_std_price">100~250만원</p>
+        <p class="price-sub" data-i18n="pkg_std_sub">+ 월 3~10만원</p>
+        <ul>
+          <li data-i18n="pkg_std_1">자동화 + 웹 대시보드</li>
+          <li data-i18n="pkg_std_2">PC/모바일 반응형</li>
+          <li data-i18n="pkg_std_3">월 1회 동작 점검</li>
+        </ul>
+      </div>
+      <div class="package-card reveal">
+        <h3>Premium</h3>
+        <p class="price" data-i18n="pkg_prm_price">300~700만원</p>
+        <p class="price-sub" data-i18n="pkg_prm_sub">+ 월 10~30만원</p>
+        <ul>
+          <li data-i18n="pkg_prm_1">실시간 대시보드</li>
+          <li data-i18n="pkg_prm_2">카톡/이메일 알림</li>
+          <li data-i18n="pkg_prm_3">다중 사용자 로그인</li>
+          <li data-i18n="pkg_prm_4">AI 분석 리포트</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Differentiators -->
+  <section id="diff">
+    <div class="diff-grid">
+      <div class="diff-item reveal">
+        <span class="diff-num">01</span>
+        <h3 data-i18n="diff1_title">엑셀이 아닌 사이트로</h3>
+        <p data-i18n="diff1_desc">결과물을 엑셀이 아닌 웹 대시보드로 받습니다.</p>
+      </div>
+      <div class="diff-item reveal">
+        <span class="diff-num">02</span>
+        <h3 data-i18n="diff2_title">AI 분석 포함</h3>
+        <p data-i18n="diff2_desc">데이터를 AI가 자동 해석·요약합니다.</p>
+      </div>
+      <div class="diff-item reveal">
+        <span class="diff-num">03</span>
+        <h3 data-i18n="diff3_title">알림 기본 포함</h3>
+        <p data-i18n="diff3_desc">PC를 켜지 않아도 카톡/이메일로 알림.</p>
+      </div>
+      <div class="diff-item reveal">
+        <span class="diff-num">04</span>
+        <h3 data-i18n="diff4_title">어떤 언어든 OK</h3>
+        <p data-i18n="diff4_desc">Submit in any language — we handle translation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Intake Form + Live Estimate -->
+  <section id="intake-form">
+    <h2 class="section-title" data-i18n="form_title">무료 견적 받기</h2>
+    <p class="section-desc" data-i18n="form_desc">아래 질문에 답하시면 예상 견적을 바로 확인할 수 있습니다.</p>
+
+    <div class="form-container">
+      <form id="autolink-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+        <input type="hidden" name="subject" value="AutoLink 의뢰서">
+        <input type="hidden" name="from_name" value="AutoLink Intake">
+
+        <!-- Basic Info -->
+        <fieldset class="form-section">
+          <legend data-i18n="form_basic">기본 정보</legend>
+          <div class="form-row">
+            <label data-i18n="form_name">이름 / 회사명</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-row">
+            <label data-i18n="form_email">이메일</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label data-i18n="form_industry">업종</label>
+            <input type="text" name="industry">
+          </div>
+        </fieldset>
+
+        <!-- 6-Variable Rubric -->
+        <fieldset class="form-section rubric">
+          <legend data-i18n="form_rubric">자동화 요구사항 (6가지)</legend>
+
+          <!-- V1: Data Sources -->
+          <div class="rubric-q">
+            <p class="q-label" data-i18n="v1_label">① 데이터 소스 수</p>
+            <div class="radio-group">
+              <label><input type="radio" name="v1" value="1" checked><span data-i18n="v1_1">1개</span></label>
+              <label><input type="radio" name="v1" value="2"><span data-i18n="v1_2">2~3개</span></label>
+              <label><input type="radio" name="v1" value="3"><span data-i18n="v1_3">4개 이상</span></label>
+            </div>
+          </div>
+
+          <!-- V2: Source Type -->
+          <div class="rubric-q">
+            <p class="q-label" data-i18n="v2_label">② 소스 종류</p>
+            <div class="radio-group">
+              <label><input type="radio" name="v2" value="1" checked><span data-i18n="v2_1">엑셀/CSV/공개 API</span></label>
+              <label><input type="radio" name="v2" value="2"><span data-i18n="v2_2">일반 웹사이트</span></label>
+              <label><input type="radio" name="v2" value="3"><span data-i18n="v2_3">로그인 필요/동적 사이트</span></label>
+            </div>
+          </div>
+
+          <!-- V3: Transform Logic -->
+          <div class="rubric-q">
+            <p class="q-label" data-i18n="v3_label">③ 데이터 가공</p>
+            <div class="radio-group">
+              <label><input type="radio" name="v3" value="1" checked><span data-i18n="v3_1">단순 (필터/합계)</span></label>
+              <label><input type="radio" name="v3" value="2"><span data-i18n="v3_2">룰 기반 분류</span></label>
+              <label><input type="radio" name="v3" value="3"><span data-i18n="v3_3">AI 분석 필요</span></label>
+            </div>
+          </div>
+
+          <!-- V4: Output -->
+          <div class="rubric-q">
+            <p class="q-label" data-i18n="v4_label">④ 결과물 형태</p>
+            <div class="radio-group">
+              <label><input type="radio" name="v4" value="1" checked><span data-i18n="v4_1">엑셀/CSV</span></label>
+              <label><input type="radio" name="v4" value="2"><span data-i18n="v4_2">웹 대시보드</span></label>
+              <label><input type="radio" name="v4" value="3"><span data-i18n="v4_3">실시간 + 알림 + 로그인</span></label>
+            </div>
+          </div>
+
+          <!-- V5: Frequency -->
+          <div class="rubric-q">
+            <p class="q-label" data-i18n="v5_label">⑤ 실행 빈도</p>
+            <div class="radio-group">
+              <label><input type="radio" name="v5" value="1" checked><span data-i18n="v5_1">1회성</span></label>
+              <label><input type="radio" name="v5" value="2"><span data-i18n="v5_2">매일/매주</span></label>
+              <label><input type="radio" name="v5" value="3"><span data-i18n="v5_3">실시간</span></label>
+            </div>
+          </div>
+
+          <!-- V6: Data Quality -->
+          <div class="rubric-q">
+            <p class="q-label" data-i18n="v6_label">⑥ 현재 데이터 상태</p>
+            <div class="radio-group">
+              <label><input type="radio" name="v6" value="1" checked><span data-i18n="v6_1">깨끗·정리됨</span></label>
+              <label><input type="radio" name="v6" value="2"><span data-i18n="v6_2">다소 불규칙</span></label>
+              <label><input type="radio" name="v6" value="3"><span data-i18n="v6_3">정리 안 됨</span></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Free Description -->
+        <fieldset class="form-section">
+          <legend data-i18n="form_detail">상세 설명</legend>
+          <div class="form-row">
+            <label data-i18n="form_what">어떤 업무를 자동화하고 싶으신가요?</label>
+            <textarea name="description" rows="4"></textarea>
+          </div>
+          <div class="form-row half">
+            <div>
+              <label data-i18n="form_deadline">희망 납기</label>
+              <input type="text" name="deadline">
+            </div>
+            <div>
+              <label data-i18n="form_budget">예산 범위</label>
+              <input type="text" name="budget">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Live Estimate -->
+        <div id="estimate-box">
+          <div class="estimate-header" data-i18n="est_title">예상 견적</div>
+          <div class="estimate-body">
+            <div class="est-row">
+              <span data-i18n="est_score">점수</span>
+              <span id="est-score">6</span><span>/18</span>
+            </div>
+            <div class="est-row">
+              <span data-i18n="est_grade">등급</span>
+              <span id="est-grade">S</span>
+            </div>
+            <div class="est-row">
+              <span data-i18n="est_price">예상 단가</span>
+              <span id="est-price">10~30만원</span>
+            </div>
+            <div class="est-row">
+              <span data-i18n="est_sub">월 구독</span>
+              <span id="est-sub">없음</span>
+            </div>
+          </div>
+          <p class="est-disclaimer" data-i18n="est_disclaimer">이 견적은 참고용이며, 정확한 견적은 상담 후 안내됩니다.</p>
+        </div>
+
+        <!-- Hidden: send rubric scores -->
+        <input type="hidden" name="rubric_score" id="hidden-score">
+        <input type="hidden" name="rubric_grade" id="hidden-grade">
+        <input type="hidden" name="rubric_estimate" id="hidden-estimate">
+        <input type="hidden" name="client_language" id="hidden-lang">
+
+        <button type="submit" class="submit-btn" data-i18n="form_submit">의뢰서 제출</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- SECTION 6: FAQ -->
+  <section id="faq">
+    <h2 class="section-title" data-i18n="faq_title">자주 묻는 질문</h2>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary data-i18n="faq1_q">비용은 어떻게 산정되나요?</summary>
+        <p data-i18n="faq1_a">위 의뢰서의 6가지 항목을 기반으로 복잡도를 측정합니다. 점수에 따라 S~D등급이 결정되며, 등급별 단가 범위가 적용됩니다.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary data-i18n="faq2_q">납품 후 유지보수는 어떻게 되나요?</summary>
+        <p data-i18n="faq2_a">월 구독 상품을 선택하시면 호스팅, 모니터링, 사이트 구조 변경 대응이 포함됩니다. 비구독 시 변경 대응은 건당 별도 견적입니다.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary data-i18n="faq3_q">어떤 사이트든 크롤링 가능한가요?</summary>
+        <p data-i18n="faq3_a">약관상 자동화가 금지된 플랫폼, 캡차/생체 인증 사이트, 모바일 앱은 서비스 범위에 포함되지 않습니다. 공개 API가 있는 경우 우선 활용합니다.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary data-i18n="faq4_q">해외에서도 의뢰 가능한가요?</summary>
+        <p data-i18n="faq4_a">네. 어떤 언어로든 의뢰서를 작성하실 수 있으며, 모든 커뮤니케이션은 고객님의 언어로 진행됩니다.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span class="brand">Auto<span class="accent">Link</span></span>
+      <p>SL Corporation &copy; 2026</p>
+      <p class="footer-note" data-i18n="footer_note">Powered by automation. Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
