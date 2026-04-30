@@ -9,13 +9,17 @@
 
 ## 🚨 즉시 환기해야 할 이슈
 
-### 🔴 [ACT-007] Gmail MCP 복구 — 매 세션 사용자에게 환기 필수
+### 🟡 [ACT-007] Gmail MCP 복구 — 부분 복구 완료
 
-**2026-04-30 진행 상황 (P29.1.1.0 마지막)**:
-- 사용자가 모바일 Claude 앱에서 Gmail Connector 재연결 완료 (쓰기/삭제 도구 "승인 필요" 활성화)
-- BUT: P29.1.1.0 세션의 ToolSearch에서는 여전히 Gmail 도구 미노출 (서버 ID `0c984139-...`)
-- → 새 세션(P29.2.1.0 권장)에서 작동 여부 즉시 검증 필요
-- 동시 점검: Drive 계정 정합성 (현재 `cjy@hojinri.com` 회사 계정), GitHub Connector 추가
+**2026-04-30 P29.1.1.0 최종 상태**:
+- ✅ 계정 jyc0289y@gmail.com 정상 연결
+- ✅ `search_threads` / `get_thread` / `create_draft` 작동 검증 (테스트 Draft 생성 성공)
+- ❌ `create_label` 차단 — `gmail.labels` / `gmail.modify` 스코프 누락 (Anthropic Connector OAuth가 요청 안 함)
+- ✅ Drive: jyc0289y@gmail.com 정상 연결
+- 🟡 GitHub MCP: 추가 진행 중 (사용자 작업)
+
+→ **운영 가능**: SKILL.md를 라벨-없이 Gmail API 버전으로 재작성 완료 (별표 + Draft 제목 마커로 분류).
+→ **추후 ACT-010**: Anthropic이 `gmail.labels` 스코프를 추가하면 라벨 기반으로 재전환.
 
 **현재 상태**: Gmail MCP가 OAuth 권한 부족으로 작동 불가. Chrome MCP로 우회 중.
 

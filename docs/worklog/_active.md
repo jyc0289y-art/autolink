@@ -18,6 +18,21 @@
 
 ## 📜 작업 이력 (시간 역순)
 
+### [2026-04-30] Gmail MCP 부분 복구 + SKILL Gmail API 재작성
+- **테스트 결과 (Chrome MCP로 권한 페이지 직접 검증)**:
+  - 부여된 스코프: profile / `gmail.readonly` / `gmail.compose` (3개)
+  - 누락 스코프: `gmail.labels`, `gmail.modify` (Anthropic Connector OAuth가 요청 안 함)
+  - Draft 작성 테스트 성공 (ID `r-326282300416646164`)
+- **결정**: 라벨 없이도 운영 가능 → 별표(★) + Draft 제목 마커로 분류
+- **결과물**: `~/.claude/scheduled-tasks/autolink-intake/SKILL.md` Gmail API 버전 (Chrome MCP 의존성 제거)
+  - 검색 쿼리: `from:noreply@web3forms.com is:unread -is:starred`
+  - Draft 제목 마커: `[A 적극 수주]`, `[B 추가 정보]`, `[C 정중 거절]`, `[REJECT]`, `[INFO_REQ]`
+  - 재처리 방지: `list_drafts`로 사전 확인
+- **상태 변화**:
+  - ACT-007: 🔴 → 🟡 부분 복구
+  - ACT-008 (라벨 5개 수동 생성): 불필요해짐 (라벨 미사용 설계)
+  - 신규 ACT-010: 라벨 스코프 추가 시 라벨 기반으로 재전환
+
 ### [2026-04-30 핸드오프] P29.1.1.0 → P29.2.1.0 세션 전환 사유
 - **사유**: 사용자가 모바일에서 Gmail Connector 재연결했으나, P29.1.1.0 세션의 도구 목록에는 미반영 (MCP 핸드셰이크는 세션 단위)
 - **새 세션 시작 전 사용자 점검 필요**:
